@@ -13,7 +13,7 @@ cd
 git clone https://github.com/91dave/bash-prefs.git
 cd bash-prefs
 cp bash_prefs ../.bash_prefs
-cp bashrc ../.bashrc
+echo "source ~/.bash_prefs" >> ~/.bashrc
 cp screenrc ../.screenrc
 cp vimrc ../.vimrc
 cd ..
