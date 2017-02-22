@@ -19,4 +19,5 @@ cp screenrc ../.screenrc
 cp vimrc ../.vimrc
 cd ..
 rm -rf bash-prefs
+bash ; exit
 ```
