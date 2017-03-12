@@ -1,6 +1,8 @@
 syntax on
 map t :tabedit 
+set autoindent
 set expandtab
-set tabstop=4
+set foldmethod=marker
 set nu
+set tabstop=4
 colorscheme torte
