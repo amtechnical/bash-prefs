@@ -21,3 +21,10 @@ cd ..
 rm -rf bash-prefs
 bash ; exit
 ```
+
+Additonally, you might like to use the wonderful [ANSI Code generator](https://github.com/fidian/ansi), to easily colourize output.
+```bash
+curl -OL git.io/ansi
+chmod 755 ansi
+sudo mv ansi /usr/local/bin/
+```
