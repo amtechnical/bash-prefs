@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-alias docker='sudo docker'
-alias docker-compose='sudo docker-compose'
 export PS1='\[\033[01;32m\]\u\[\033[01;00m\]@\[\033[01;33m\]\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
 
 # include directory colors
@@ -14,3 +11,19 @@ screen -r >& /dev/null && \
     echo "You were automatically logged into an open screen session." && \
     echo -e "You have now been logged out of \033[01;33m$(hostname)\033[00m entirely" && \
     exit
+
+# Docker Support
+alias docker='sudo docker'
+alias docker-compose='sudo docker-compose'
+
+# WSL docker support
+# alias docker='docker docker -H tcp://0.0.0.0:2375'
+# alias docker-compose='docker-compose docker -H tcp://0.0.0.0:2375'
+
+# WSL docker installation
+# wget https://get.docker.com/builds/Linux/x86_64/docker-1.13.1.tgz
+# tar -xzvf docker-1.13.1.tgz
+# mv docker/* /usr/bin
+
+# sudo curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
+# sudo chmod a+x /usr/bin/docker-compose
