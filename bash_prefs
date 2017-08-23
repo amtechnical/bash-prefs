@@ -1,6 +1,8 @@
 #!/bin/bash
 
-export PS1='\[\033[01;32m\]\u\[\033[01;00m\]@\[\033[01;33m\]\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+[ -z "$HOST_NICKNAME" ] && HOST_NICKNAME=$HOSTNAME
+
+export PS1="\[\033[01;32m\]\u\[\033[01;00m\]@\[\033[01;33m\]$HOST_NICKNAME\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ "
 
 # include directory colors
 [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
